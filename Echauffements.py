@@ -27,9 +27,8 @@ print(resultat_2)  # Affiche le message pour 'bébé' et 0 an
 
 
 def power_2(limit):
-    powers_list = [0]  # Commencer par 0
-
-    power = 2  # Commencer avec la première puissance de 2 (2^1 = 2)
+    power = 1
+    powers_list = [0]  # Ajout de la puissance de 2 égale à zéro dans la liste
 
     while power <= limit:
         powers_list.append(power)
@@ -40,6 +39,7 @@ def power_2(limit):
 # Exemple d'appel à la fonction avec limit = 10
 result = power_2(10)
 print(result)
+
 
 
 
