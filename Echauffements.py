@@ -26,6 +26,17 @@ print(resultat_2)  # Affiche le message pour 'bébé' et 0 an
 
 
 
+def power_2(limit):
+    power = 1
+    result = []
+    while power <= limit:
+        result.append(str(power))
+        power *= 2
+
+    print(",".join(result))
+
+# Exemple d'appel à la fonction avec limit = 10
+power_2(10)
 
 
 
