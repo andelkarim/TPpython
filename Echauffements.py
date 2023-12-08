@@ -27,16 +27,40 @@ print(resultat_2)  # Affiche le message pour 'bébé' et 0 an
 
 
 def power_2(limit):
-    power = 1
-    result = []
+    powers_list = [0]  # Commencer par 0
+
+    power = 2  # Commencer avec la première puissance de 2 (2^1 = 2)
+
     while power <= limit:
-        result.append(str(power))
+        powers_list.append(power)
         power *= 2
 
-    print(",".join(result))
+    return powers_list
 
 # Exemple d'appel à la fonction avec limit = 10
-power_2(10)
+result = power_2(10)
+print(result)
+
+
+
+def check_ip_format(ip):
+    sections = ip.split('.')
+
+    if len(sections) != 4:
+        return False  
+
+    for section in sections:
+        if not section.isdigit() or not 0 <= int(section) <= 255:
+            return False  # Si la section n'est pas un entier valide entre 0 et 255, ce n'est pas une adresse IPv4
+
+    return True 
+
+# Exemples d'appels à la fonction
+print(check_ip_format('10.0.0.0'))  # True
+print(check_ip_format('192.12.'))  # False
+
+
+
 
 
 
